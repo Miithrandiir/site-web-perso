@@ -1,7 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const path = require('path')
 
-module.exports = nextConfig
+module.exports = {
+    reactStrictMode: true,
+    swcMinify: true,
+    i18n: {
+        locales: ['en', 'fr'],
+        defaultLocale: 'fr'
+    },
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'styles')],
+    }
+}
