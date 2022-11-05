@@ -1,20 +1,21 @@
 import type {GetStaticPropsContext, NextPage} from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import Image from 'next/future/image'
 import {useTranslations} from "use-intl";
-import styles from '../styles/header.module.scss'
+import headerStyle from '../styles/header.module.scss'
 import bodyStyle from '../styles/body.module.scss'
 
 import programmerSvg from '../public/undraw_programming.svg'
 import HeaderFooter from '../public/header_footer.svg'
 import sciencePicture from '../public/hobbies/spacex-OHOU-5UVIYQ-unsplash.jpg'
+import musicPicture from '../public/hobbies/perfectmirror-RLV8znkJf2M-unsplash.jpg'
+import workPicture from '../public/hobbies/konstantin-evdokimov-rhP8U-86GZA-unsplash.jpg'
 
 
 const Home: NextPage = () => {
     const t = useTranslations('Home');
     return (
         <>
-            <section className={styles.header}>
+            <section className={headerStyle.header}>
                 <div className={"content"}>
                     <div className={"title"}>
                         <h1>Simon HEBAN</h1>
@@ -23,16 +24,13 @@ const Home: NextPage = () => {
                     <Image src={programmerSvg} alt={"Image that shows a person which develop on a laptop"}/>
                 </div>
 
-                <Image src={HeaderFooter} alt={""} className={styles.bottom_header} layout={'responsive'}/>
+                <Image src={HeaderFooter} alt={""} className={headerStyle.bottom_header} width={'3000'}/>
             </section>
 
             <section id={bodyStyle.whoIAm} className={bodyStyle.section}>
                 <h2 className={bodyStyle.title}>{t('who_i_am')}</h2>
 
-                <p>Je m'appelle Simon j'ai {(new Date()).getFullYear() - 2000} ans. Je développe depuis très jeune, en
-                    effet j'ai commencé le développement à l'âge de 14 ans grâce au jeu-vidéo Minecraft. J'ai pu
-                    expérimenté pas mal de langage de programmation. Je n'arrête pas de découvrir de nouvelles choses
-                    chaque jours !</p>
+                <p>{t('presentation', {age: ((new Date()).getFullYear() - 2000)})}</p>
 
             </section>
 
@@ -41,17 +39,17 @@ const Home: NextPage = () => {
 
                 <div>
                     <div>
-                        <Image src={sciencePicture} alt={"Image fusée SpaceX qui décolle"} objectFit={'cover'} />
+                        <Image src={sciencePicture} alt={"Image fusée SpaceX qui décolle"} fill={true}/>
                         <h3>SCIENCES</h3>
                     </div>
 
                     <div>
-                        <Image src={sciencePicture} alt={"Image fusée SpaceX qui décolle"}/>
+                        <Image src={musicPicture} alt={"Image fusée SpaceX qui décolle"} fill={true}/>
                         <h3>SCIENCES</h3>
                     </div>
 
                     <div>
-                        <Image src={sciencePicture} alt={"Image fusée SpaceX qui décolle"}/>
+                        <Image src={workPicture} alt={"Image fusée SpaceX qui décolle"} fill={true}/>
                         <h3>SCIENCES</h3>
                     </div>
                 </div>

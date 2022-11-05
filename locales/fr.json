@@ -2,6 +2,7 @@
   "Home": {
     "fullstack_dev": "Développeur Fullstack",
     "who_i_am" : "Qui suis-je ?",
-    "my_hobbies": "Mes passions"
+    "my_hobbies": "Mes passions",
+    "presentation": "Je m'appelle Simon j'ai {age} ans. Je développe depuis très jeune, en\neffet j'ai commencé le développement à l'âge de 14 ans grâce au jeu-vidéo Minecraft. J'ai pu\nexpérimenté pas mal de langage de programmation. Je n'arrête pas de découvrir de nouvelles choses\nchaque jours !"
   }
 }
