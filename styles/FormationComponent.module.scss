@@ -1,0 +1,11 @@
+.formation {
+  background: #FFFFFF;
+  border-left: 4px solid #61A6FF;
+  border-radius: 2px;
+  width: min(550px, 50%);
+  &>h2 {
+    font-family: "Roboto", sans-serif;
+    color: #555555;
+    font-size: 1.25em;
+  }
+}

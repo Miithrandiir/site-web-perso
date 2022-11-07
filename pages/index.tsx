@@ -9,10 +9,31 @@ import HeaderFooter from '../public/header_footer.svg'
 import sciencePicture from '../public/hobbies/spacex-OHOU-5UVIYQ-unsplash.jpg'
 import musicPicture from '../public/hobbies/perfectmirror-RLV8znkJf2M-unsplash.jpg'
 import workPicture from '../public/hobbies/konstantin-evdokimov-rhP8U-86GZA-unsplash.jpg'
-
+import Formation from "../core/Formation";
+import FormationComponent from "../components/FormationComponent";
 
 const Home: NextPage = () => {
     const t = useTranslations('Home');
+
+    const formations: Formation[] = [
+        {
+            school: 'Université du Littoral Côte d\'Opale',
+            title: 'Master 2 Web et Science des données (WeDSci)',
+            honors: '',
+            dateBegin: new Date(2022, 9, 1),
+            dateEnd: new Date(2023, 9, 1),
+            subject: ['Modélisation de systèmes', 'Développement Android', 'Apprentissage automatique', 'Sécurité réseaux & applicatif', 'Framework frontend', 'Développement Multi-Tiers', 'DevOps', 'Exploration et Entrepôt de données']
+        },
+        {
+            school: 'Université du Littoral Côte d\'Opale',
+            title: 'Master 1 Web et Science des données (WeDSci)',
+            honors: 'Mention très bien',
+            dateBegin: new Date(2021, 9, 1),
+            dateEnd: new Date(2022, 9, 1),
+            subject: ['POO Avancée (Java)', 'Algorithmique avancée', 'Apprentissage automatique','Agilité','Programmation fonctionnelle (Haskell)', 'Initiation à la recherche', 'Service Web', 'Compilation', 'Résolution de problème d\'optimisation', 'Calcul haute performance']
+        }
+    ]
+
     return (
         <>
             <section className={headerStyle.header}>
@@ -53,6 +74,19 @@ const Home: NextPage = () => {
                         <h3>SCIENCES</h3>
                     </div>
                 </div>
+            </section>
+
+            <section className={bodyStyle.section}>
+                <h2 className={bodyStyle.title}>Mes formations</h2>
+
+                <div className={bodyStyle.formations}>
+                {
+                    formations.map((elt, index) => {
+                        return <FormationComponent data={elt} key={index}/>
+                    })
+                }
+                </div>
+
             </section>
         </>
     )
