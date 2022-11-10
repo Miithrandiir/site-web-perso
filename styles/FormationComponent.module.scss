@@ -1,11 +1,62 @@
 .formation {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
   background: #FFFFFF;
   border-left: 4px solid #61A6FF;
   border-radius: 2px;
   width: min(550px, 50%);
-  &>h2 {
-    font-family: "Roboto", sans-serif;
-    color: #555555;
-    font-size: 1.25em;
+  padding: 20px 10px;
+  &>.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 7px;
+    grid-auto-rows: auto;
+
+    p, h1, h2, h3, h4 {
+      font-family: "Roboto", sans-serif;
+      color: #555555;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      font-weight: 900;
+    }
+
+    & > div {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      font-weight: 700;
+      align-items: center;
+
+      & > svg {
+        justify-self: center;
+        font-size: 1.25em;
+        margin-right: 10px;
+      }
+    }
   }
+
+  &>hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid rgba(0,0,0,.25);
+  }
+
+  &>.subjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    &>div {
+      display: flex;
+      align-items: center;
+      p {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        margin-left: 5px;
+      }
+    }
+  }
+
 }

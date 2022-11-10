@@ -2,7 +2,9 @@
 
 @import "@fontsource/righteous";
 @import "@fontsource/roboto";
+@import "@fontsource/raleway/400.css";
 @import "@fontsource/roboto/900.css";
+@import "@fontsource/roboto/700.css";
 @import "@fontsource/roboto/300.css";
 
 * {
@@ -12,4 +14,11 @@
 
 body {
   background: $background;
+}
+
+html,body {
+  //height: 100%;
+}
+#__next {
+  //height: 100%;
 }

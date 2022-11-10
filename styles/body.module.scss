@@ -76,7 +76,7 @@
 
 .section {
   margin: 10rem 0;
-  h2 {
+  &>h2 {
     margin-bottom: 3rem;
   }
 }
@@ -85,6 +85,7 @@
   display: flex;
   width: 75%;
   margin: 0 auto;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
