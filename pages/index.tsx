@@ -88,6 +88,33 @@ const Home: NextPage = () => {
                 </div>
 
             </section>
+
+            <section className={[bodyStyle.section, bodyStyle.language_section].join(" ")}>
+                <h2>Compétences linguistiques</h2>
+                <div className={bodyStyle.languages}>
+                    <div className={bodyStyle.language}>
+                        <img src={"https://flagcdn.com/fr.svg"} alt={"France flag"}/>
+                        <h3>Français</h3>
+                        <div className={bodyStyle.level}>
+                            <span>NATIF</span>
+                        </div>
+                    </div>
+                    <div className={bodyStyle.language}>
+                        <img src={"https://flagcdn.com/gb.svg"} alt={"France flag"}/>
+                        <h3>Anglais</h3>
+                        <div className={bodyStyle.level}>
+                            <span>B2</span>
+                        </div>
+                    </div>
+                    <div className={bodyStyle.language}>
+                        <img src={"https://flagcdn.com/de.svg"} alt={"France flag"}/>
+                        <h3>Allemand</h3>
+                        <div className={bodyStyle.level}>
+                            <span>A2</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
